@@ -41,7 +41,7 @@ function App() {
           <input
             type="submit"
             value="Go"
-            className="px-8 bg-gray-100 font-bold rounded-md hover:bg-gray-200 transition-colors text-gray-500"
+            className="px-8 bg-gray-100 font-bold rounded-md hover:bg-gray-200 transition-colors text-gray-500 cursor-pointer"
           />
         </form>
 
