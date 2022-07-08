@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, FormEventHandler, useState } from "react";
 import axios from "axios";
 import Profile from "./components/Profile";
 
@@ -10,7 +10,7 @@ function App() {
   const [user, setUser] = useState("");
   const [userData, setUserData] = useState<any>(null);
 
-  const handleSubmit = async (evt) => {
+  const handleSubmit = async (evt: FormEvent) => {
     evt.preventDefault();
 
     try {
@@ -26,7 +26,9 @@ function App() {
 
   return (
     <div className="flex h-full items-center justify-center">
-      <div className="border-2 flex flex-col items-center">
+      <div className="border-2 flex flex-col items-center px-2 py-8">
+        <h1 className="pl-8 self-start">Github profiler</h1>
+
         <form onSubmit={handleSubmit} className="p-8 rounded-md flex gap-4">
           <div className="p-5 border-2 rounded-md">
             <span className="text-gray-300 px-2">github.com/</span>
